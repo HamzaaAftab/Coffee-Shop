@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.logo img{
+    height: 5.7rem;
+    filter: brightness(248%);
+    filter: drop-shadow(2px 2px 2px white);
+    margin-top: 2rem;
+    margin-top: 3rem;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 12vh;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navlist {
+    display: flex;
+    gap: 2rem;
+}
+.navlist li {
+    list-style: none;
+}
+.navlist li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 1px;
+    font-size: 1.4rem;
+    letter-spacing: .08rem;
+}
+.navlist .slider{
+    background-color: rgba(255, 255, 255, 0.548);
+    /* background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(255, 255, 255)); */
+    width: 6rem;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    right: 454px;
+    border-top: .4rem solid rgba(0, 0, 0, 0.815);
+    border-radius: 0 0 2rem 2rem;
+    backdrop-filter: blur(.5rem);
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+.navlist li:nth-child(2):hover ~ .slider{
+    right: 355px;
+}
+.navlist li:nth-child(3):hover ~ .slider{
+    right: 236px;
+    width: 7rem;
+}
+.navlist li:nth-child(4):hover ~ .slider{
+    right: 112px;
+    width: 7rem;
+}
+.navlist li:nth-child(5):hover ~ .slider{
+    right: -2px;
+    width: 6.6rem;
+}
+
+.hero{
+    display: flex;
+}
+.hero .left{
+    background-color: #2c1e1e;
+    padding-left: 3rem;
+    padding-right: 1rem;
+
+}
+.hero .right{
+    background-color: #7c573c;
+    justify-content: center;
+}
+.hero .hero_split{
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.left .content{
+    color: white;
+}
+.content h1{
+    font-size: 4rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .3rem rgb(255, 240, 240);
+    font-family: 'Lemon', cursive;
+    text-shadow: 4px 4px 4px rgba(211, 135, 20, 0.877);
+    letter-spacing: .3rem;
+}
+.content p{
+    color: rgba(139, 133, 133, 0.904);
+    margin: 1rem 0;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    max-width: 80%;
+    font-family: 'Merriweather', serif;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to top left, #775858, #2c1e1e);
+   /* Gradient background */
+    color: white;
+   /* White text color */
+    font-family: "Segoe UI", sans-serif;
+   /* Stylish and legible font */
+    font-weight: bold;
+    font-size: 18px;
+   /* Large font size */
+    border: 2px solid rgb(167, 125, 167);
+   /* No border */
+    border-radius: 30px;
+   /* Rounded corners */
+    padding: 14px 28px;
+   /* Large padding */
+    cursor: pointer;
+   /* Cursor on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+   /* Subtle shadow */
+    animation: button-shimmer 2s infinite;
+    transition: all 0.3s ease-in-out;
+   /* Smooth transition */
+  }
+  
+  /* Hover animation */
+  .button:hover {
+    background: linear-gradient(to top left, #775858, #2c1e1e);
+    animation: button-particles 2s ease-in-out infinite;
+    transform: translateY(4px);
+  }
+  
+  /* Click animation */
+  .button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Shimmer animation */
+  @keyframes button-shimmer {
+    0% {
+      background-position: left top;
+    }
+  
+    100% {
+      background-position: right bottom;
+    }
+  }
+  
+  /* Particle animation */
+  @keyframes button-particles {
+    0% {
+      background-position: left top;
+    }
+  
+    100% {
+      background-position: right bottom;
+    }
+  }
+.right img{
+    margin-top: 1rem;
+    height: 57%;
+    padding: 1rem;
+    margin-left: 4rem;
+}
+.middle{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.middle .circle{
+    width: 8rem;
+    height: 8rem;
+    background-color: white;
+    border-radius: 8rem;
+    gap: 3px;
+    border:none;
+    padding: 2rem;
+    background-position: center;
+    border-style: groove;
+    border-width: .5rem;
+    border-color: #775858;
+}
+.middle .circle:nth-child(1){
+    background-image: url(1.jpg);
+    background-size: cover;
+}
+.middle .circle:nth-child(2){
+    background-image: url(2.jpg);
+    background-size: cover;
+    margin-top: 1rem;
+}
+.middle .circle:nth-child(3){
+    background-image: url(3.jpg);
+    background-size: cover;
+    margin-top: 1rem;
+}
+
